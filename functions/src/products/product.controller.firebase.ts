@@ -4,6 +4,7 @@ import {EventContext} from 'firebase-functions';
 import {Product} from '../models/product';
 import {ProductController} from './product.controller';
 import {ProductService} from './product.service';
+import {Stock} from "../models/stock";
 
 export class ProductControllerFirebase implements ProductController {
 
@@ -21,8 +22,15 @@ export class ProductControllerFirebase implements ProductController {
         return this.productService.updateTopProduct(context.params.id, productBefore, productAfter);
     }
 
-    create(snap: DocumentSnapshot, context: EventContext): Promise<Product> {
+    create(snap: DocumentSnapshot, context: EventContext): Promise<Stock> {
         const product = snap.data() as Product;
-        return this.productService.create(product);
+
+        product.id = context.params.id;
+        const stock = {
+            productId: product.id,
+            productName: product.name,
+            stockAmount: 5
+        }
+        return this.productService.create(stock);
     }
 }

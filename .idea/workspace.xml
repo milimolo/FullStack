@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8edbbc50-f234-4ea1-a21d-25d2c75d1aef" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/FullStackProject/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/FullStackProject/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FullStackProject/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/FullStackProject/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FullStackProject/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FullStackProject/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/src/models/orderline.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/src/orders/order.repository.firebase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/functions/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/functions/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/dependency-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/dependency-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/models/order.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/models/order.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/models/stock.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/models/stock.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/orders/order.controller.firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/orders/order.controller.firebase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/orders/order.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/orders/order.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/products/product.controller.firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/products/product.controller.firebase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/products/product.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/products/product.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/products/product.repository.firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/products/product.repository.firebase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/products/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/products/product.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/stock/stock.repository.firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/stock/stock.repository.firebase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/stock/stock.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/stock/stock.repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,9 +40,10 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/functions" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Users\bonde\Desktop\GitHub\FullStack\FullStackProject\node_modules\typescript\lib" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="C:\Users\bonde\GitHub\FullStack\functions\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -69,6 +84,12 @@
       <workItem from="1585668368312" duration="5175000" />
       <workItem from="1585726174418" duration="3484000" />
       <workItem from="1585827220162" duration="377000" />
+      <workItem from="1585827949636" duration="298000" />
+      <workItem from="1585828268311" duration="579000" />
+      <workItem from="1585923968728" duration="4056000" />
+      <workItem from="1585990141923" duration="9881000" />
+      <workItem from="1586001437365" duration="5937000" />
+      <workItem from="1586021507637" duration="269000" />
     </task>
     <servers />
   </component>

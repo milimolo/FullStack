@@ -1,6 +1,7 @@
 import { Product } from '../models/product'
 import { ProductRepository } from './product.repository'
 import {StockRepository} from "../stock/stock.repository";
+import {Stock} from "../models/stock";
 
 export class ProductService {
     constructor(private productRepository: ProductRepository,
@@ -39,10 +40,9 @@ export class ProductService {
         });
     }
 
-    async create(product: Product): Promise<Product> {
-        await this.productRepository.create(product);
-        await this.stockRepo.create(product, 5);
-        return Promise.resolve(product);
+    async create(stock: Stock): Promise<Stock> {
+        await this.stockRepo.create(stock);
+        return Promise.resolve(stock);
     }
 
     buy(product: Product): Product {

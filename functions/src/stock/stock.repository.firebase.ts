@@ -7,10 +7,12 @@ import FieldValue = admin.firestore.FieldValue;
 export class StockRepositoryFirebase implements StockRepository{
     stockPath = 'stock'
 
-    async create(product: Product, number: number): Promise<Stock> {
-        const stock: Stock = {product: product, count: number};
-        await this.db().collection(`${this.stockPath}`).add(stock);
-        return Promise.resolve(stock);
+    create(stock: Stock): Promise<any> {
+        const stockCollection =  this.db().collection(`${this.stockPath}`);
+        return stockCollection.doc(stock.productId).set({
+            productName: stock.productName,
+            stockAmount: stock.stockAmount
+        });
     }
 
     db(): FirebaseFirestore.Firestore {
@@ -18,8 +20,8 @@ export class StockRepositoryFirebase implements StockRepository{
     }
 
     async lowerStock(product: Product, amount: number): Promise<void> {
-        const stock = await this.db().doc(`${this.stockPath}/${product.id}`);
-        stock.update({count: FieldValue.increment(-amount) });
+        const stock = await this.db().collection(`${this.stockPath}`).doc(product.id);
+        await stock.update({stockAmount: FieldValue.increment(-amount)});
         return Promise.resolve();
     }
 }

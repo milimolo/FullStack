@@ -1,7 +1,7 @@
-import {Product} from "./product";
+import {Orderline} from "./orderline";
 
 export interface Order {
-    orderLines:
-        { product: Product, amount: number; }[];
+    uId: string;
+    orderLines: Orderline[];
     totalPrice: number;
 }

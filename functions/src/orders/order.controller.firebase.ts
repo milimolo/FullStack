@@ -8,7 +8,9 @@ export class OrderControllerFirebase implements OrderController{
     constructor(private orderService: OrderService) {}
 
     placeOrder(snap: DocumentSnapshot, context: EventContext): Promise<Order> {
-        return this.orderService.deployOrder(context.params.id)
+        const order = snap.data() as Order;
+        order.uId = context.params.orderId;
+        return this.orderService.deployOrder(order)
     }
 
 }
