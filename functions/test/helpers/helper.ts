@@ -5,6 +5,7 @@ import {StockRepository} from "../../src/stock/stock.repository";
 import {IMock, Mock} from "moq.ts";
 import {OrderRepository} from "../../src/orders/order.repository";
 import {ProductRepository} from "../../src/products/product.repository";
+import {Orderline} from "../../src/models/orderline";
 
 export class TestHelper {
 
@@ -20,7 +21,7 @@ export class TestHelper {
 
     getStockRepositoryMock(): IMock<StockRepository> {
         return new Mock<StockRepository>()
-            .setup(stockRepo => stockRepo.create(this.getProduct1(), 5))
+            .setup(stockRepo => stockRepo.create(this.getStock1()))
             .returns(Promise.resolve(this.getStock1()))
             .setup(stockRepo => stockRepo.lowerStock(this.getProduct1(), 1))
             .returns(Promise.resolve());
@@ -43,8 +44,9 @@ export class TestHelper {
     }
 
     stock1: Stock = {
-        count: 1,
-        product: this.getProduct1()
+        stockAmount: 1,
+        productId: 'p1',
+        productName: 'Product 1'
     };
 
     product1: Product = {
@@ -63,11 +65,14 @@ export class TestHelper {
         timesPurchased: 0
     };
 
+    ol1: Orderline = {
+        product: this.product1,
+        amount: 1
+    };
+
     order1: Order = {
-        orderLines: [{
-            product: this.getProduct1(),
-            amount: 1
-        }],
+        uId: 'asd',
+        orderLines: [this.ol1],
         totalPrice: 1000
     };
 

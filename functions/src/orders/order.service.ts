@@ -9,9 +9,14 @@ export class OrderService{
 
     async deployOrder(order: Order): Promise<Order>{
         if(!order.orderLines || order.orderLines.length < 1) {
+            console.log('order', order);
             throw new TypeError('You need an order line to execute an order');
+            return Promise.reject(order);
         }
-        console.log('order', order);
+        if(order.orderLines[0].amount < 1){
+            console.log('order', order);
+            return Promise.reject(order);
+        }
         await this.stockRepo.lowerStock(order.orderLines[0].product, order.orderLines[0].amount);
         return Promise.resolve(order);
     }

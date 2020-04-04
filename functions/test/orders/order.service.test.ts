@@ -21,12 +21,17 @@ describe('OrderService', () => {
         expect(orderService).toBeDefined()
     });
 
-    it('When Executing order I need atleast 1 orderline', () => {
-        const order = testHelper.getOrder1();
+    it('When deploying an order I need at least 1 order line', async () => {
+        const order = testHelper.order1;
         order.orderLines = [];
-        expect(() => {orderService.deployOrder(order)}).toThrow(TypeError);
-        expect(() => {orderService.deployOrder(order)}).toThrow('You need an order line to execute an order');
+        await expect(() => {orderService.deployOrder(order)}).rejects;
     });
+
+    it('When deploying an order I need to make sure that the order has an amount of 1', async () => {
+        const order = testHelper.order1;
+        order.orderLines[0].amount = 0;
+        await expect(() => {orderService.deployOrder(order)}).rejects;
+    })
 
     it('When I execute an order, stock should go down with the correct amount of products bought with a orderline count of 1', async () => {
         const order = testHelper.getOrder1();
