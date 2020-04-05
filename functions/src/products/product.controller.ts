@@ -9,4 +9,6 @@ export interface ProductController {
     updatedTopProduct(snap: Change<DocumentSnapshot>, context: EventContext): Promise<void>;
 
     create(snap: DocumentSnapshot, context: EventContext): Promise<Stock>;
+
+    updatedProductName(snap: Change<DocumentSnapshot>, context: EventContext): Promise<void>;
 }

@@ -20,6 +20,8 @@ export class ProductRepositoryFirebase implements ProductRepository {
         return Promise.resolve(product);
     }
 
+
+
     db(): FirebaseFirestore.Firestore {
         return admin.firestore();
     }

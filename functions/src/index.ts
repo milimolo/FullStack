@@ -28,6 +28,12 @@ exports.topProductUpdated = functions.firestore
         return difa.getProductController().updatedTopProduct(snap, context)
     });
 
+exports.productNameUpdated = functions.firestore
+    .document('products/{id}')
+    .onUpdate((snap, context) => {
+        return difa.getProductController().updatedProductName(snap, context)
+    });
+
 exports.setStockOnNewProducts = functions.firestore
     .document('products/{id}')
     .onCreate((snapshot, context) => {

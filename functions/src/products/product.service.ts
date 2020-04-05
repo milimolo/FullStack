@@ -30,6 +30,16 @@ export class ProductService {
         prodId: string,
         productBefore: Product,
         productAfter: Product): Promise<void> {
+        if(!productAfter.name || productAfter.name === ''){
+            console.log('order', productAfter);
+            throw new TypeError('You need to fill out the name of the product');
+            return Promise.reject(productAfter);
+        }
+        if(productAfter.price === 0){
+            console.log('order', productAfter);
+            throw new TypeError('You need to put in a price above 0');
+            return Promise.reject(productAfter);
+        }
         const name = productAfter.name.toUpperCase();
         return this.productRepository.setTopProducts({
             id: prodId,
@@ -39,6 +49,28 @@ export class ProductService {
             timesPurchased: productAfter.timesPurchased
         });
     }
+
+    updateStockProductName(
+        prodId: string,
+        productBefore: Product,
+        productAfter: Product): Promise<void> {
+        if(productAfter){
+            if(!productAfter.name || productAfter.name === ''){
+                console.log('order', productAfter);
+                throw new TypeError('You need to fill out the name of the product');
+                return Promise.reject(productAfter);
+            }
+            return this.stockRepo.setProductName({
+                id: prodId,
+                name: productAfter.name,
+                price: productAfter.price,
+                photo: productAfter.photo,
+                timesPurchased: productAfter.timesPurchased
+            });
+            } else {
+                return this.stockRepo.deleteStock(prodId);
+            }
+        }
 
     async create(stock: Stock): Promise<Stock> {
         await this.stockRepo.create(stock);

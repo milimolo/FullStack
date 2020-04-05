@@ -31,7 +31,7 @@ describe('OrderService', () => {
         const order = testHelper.order1;
         order.orderLines[0].amount = 0;
         await expect(() => {orderService.deployOrder(order)}).rejects;
-    })
+    });
 
     it('When I execute an order, stock should go down with the correct amount of products bought with a orderline count of 1', async () => {
         const order = testHelper.getOrder1();

@@ -1,6 +1,7 @@
 import {Order} from '../models/order';
 import {StockRepository} from "../stock/stock.repository";
 import {OrderRepository} from "./order.repository";
+import {Product} from "../models/product";
 
 export class OrderService{
     constructor(private orderRepo: OrderRepository, private stockRepo: StockRepository){
@@ -19,5 +20,18 @@ export class OrderService{
         }
         await this.stockRepo.lowerStock(order.orderLines[0].product, order.orderLines[0].amount);
         return Promise.resolve(order);
+    }
+
+    updateOrderProductName(
+        prodId: string,
+        productBefore: Product,
+        productAfter: Product) {
+        return this.orderRepo.setProductName({
+            id: prodId,
+            name: productAfter.name,
+            price: productAfter.price,
+            photo: productAfter.photo,
+            timesPurchased: productAfter.timesPurchased
+        });
     }
 }

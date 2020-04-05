@@ -58,12 +58,11 @@ export class TestHelper {
     };
 
     product2: Product = {
-        name: 'Product 2',
-        id: 'p2',
-        photo: 'somewhereelse.jpg',
-        price: 23,
-        timesPurchased: 0
-    };
+        photo: 'DOOM',
+        timesPurchased: 0,
+        name: 'DOOM.png',
+        price: 222,
+        id:'ab'}
 
     ol1: Orderline = {
         product: this.product1,

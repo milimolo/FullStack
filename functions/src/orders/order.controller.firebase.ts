@@ -1,8 +1,9 @@
 import {OrderController} from "./order.controller";
-import {EventContext} from "firebase-functions";
+import {Change, EventContext} from "firebase-functions";
 import {DocumentSnapshot} from "firebase-functions/lib/providers/firestore";
 import {OrderService} from "./order.service";
 import {Order} from "../models/order";
+import {Product} from "../models/product";
 
 export class OrderControllerFirebase implements OrderController{
     constructor(private orderService: OrderService) {}
@@ -12,5 +13,13 @@ export class OrderControllerFirebase implements OrderController{
         order.uId = context.params.orderId;
         return this.orderService.deployOrder(order)
     }
+
+    updateProductName(snap: Change<DocumentSnapshot>, context: EventContext): Promise<void> {
+        const productBefore = snap.before.data() as Product;
+        const productAfter = snap.after.data() as Product;
+
+        return this.orderService.updateOrderProductName(context.params.id, productBefore, productAfter);
+    }
+
 
 }

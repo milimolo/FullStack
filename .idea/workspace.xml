@@ -3,9 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="8edbbc50-f234-4ea1-a21d-25d2c75d1aef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/orders/order.controller.firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/orders/order.controller.firebase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/orders/order.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/orders/order.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/orders/order.repository.firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/orders/order.repository.firebase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/orders/order.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/orders/order.repository.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions/src/orders/order.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/orders/order.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/products/product.controller.firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/products/product.controller.firebase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/products/product.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/products/product.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/products/product.repository.firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/products/product.repository.firebase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/products/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/products/product.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/stock/stock.repository.firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/stock/stock.repository.firebase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/stock/stock.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/stock/stock.repository.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions/test/helpers/helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/test/helpers/helper.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions/test/orders/order.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/test/orders/order.service.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/test/products/product.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/test/products/product.service.test.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +89,8 @@
       <workItem from="1585990141923" duration="9881000" />
       <workItem from="1586001437365" duration="5937000" />
       <workItem from="1586021507637" duration="5067000" />
+      <workItem from="1586080964847" duration="9973000" />
+      <workItem from="1586098504308" duration="3573000" />
     </task>
     <servers />
   </component>
